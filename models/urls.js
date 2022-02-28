@@ -16,7 +16,7 @@ const urls = new mongoose.Schema({
     required: true
   }
 },
-  {collection: 'Urls Table'}
+  {collection: 'urlsCollection'}
 );
 
 const urlsModel = mongoose.model('UrlsModel', urls);

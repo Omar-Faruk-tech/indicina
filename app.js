@@ -10,11 +10,11 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/indicina', { 
+mongoose.connect(process.env.MONGO_URL, { 
   useNewUrlParser: true, 
   useUnifiedTopology: true 
 }, err => {
-  console.log('connected')
+  console.log('DB connected')
 });
 var app = express();
 
