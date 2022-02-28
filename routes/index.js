@@ -3,9 +3,7 @@ var router = express.Router();
 const controller = require('../controllers/urls');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Indicina' });
-});
+router.get('/', controller.urlsController.getAllData);
 
 // encode URL
 router.post('/encode', controller.urlsController.createShortUrl);

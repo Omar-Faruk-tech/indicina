@@ -91,5 +91,23 @@ exports.urlsController = {
             err
           })
       })
+  }, 
+  // Get all url collections from database
+  getAllData: (req, res) => {
+    urls
+      .find()
+        .then((data) => {
+          res
+            .status(200)
+            .render('index', {
+              title: 'Indicina',
+              data: data
+            });
+        })
+        .catch((err) => {
+          res
+            .status(400)
+            .send(err)
+        })
   }
 };
