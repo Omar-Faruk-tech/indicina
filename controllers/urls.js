@@ -52,7 +52,7 @@ exports.urlsController = {
         data.save();
           res
             .status(200)
-            .redirect(data.url)
+            .send(data.url)
         })
         .catch((err) => {
           res.status(400)
