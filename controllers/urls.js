@@ -14,7 +14,7 @@ exports.urlsController = {
         .then((data) => {
           res
             .status(200)
-            .send({
+            .json({
               status: "Ok",
               shortUrl: data.shortUrl
             })
@@ -25,7 +25,7 @@ exports.urlsController = {
               .findOne({url: req.body.url})
               .then((data) => {
                 res
-                  .send(data.shortUrl);
+                  .json(data.shortUrl);
               })
           } else {
             res
@@ -43,7 +43,7 @@ exports.urlsController = {
         if(!data) {
           res 
             .status(404)
-            .send({
+            .json({
               status: "failed",
               message: "url not found"
             })
@@ -52,7 +52,7 @@ exports.urlsController = {
         data.save();
           res
             .status(200)
-            .send(data.url)
+            .json(data.url)
         })
         .catch((err) => {
           res.status(400)
@@ -70,14 +70,14 @@ exports.urlsController = {
         if (!data) {
           res 
             .status(404)
-            .send({
+            .json({
               status: "failed",
               message: "url not found"
             })
         }
         res 
             .status(200)
-            .send({
+            .json({
               status: "Ok",
               url: data.url,
               clicks: data.clicks
