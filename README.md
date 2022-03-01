@@ -28,8 +28,10 @@ In JSON format, such as:
 {
     "shortUrl": "http://sh.l/MfBaXjFuZ"
 }
-For this request, it redirects to the original URL if successful, So the response for this could be an HTML document that could be rendered on browser.
-![image](https://user-images.githubusercontent.com/83662561/155974091-687e7e57-76de-4085-8fb6-f410b02d17db.png)
+For this request, it returns the original URL if successful, So the response for this would be a JSON file containing the original URL.
+
+![image](https://user-images.githubusercontent.com/83662561/156162826-2b5b23a3-f1d7-4e0c-a022-45d729b8ad50.png)
+
 
 3.	The third returns number of clicks of each URL, just to keep track of site’s traffic.It takes I no data in the body but takes in the short URL id as a parameter in the URL, Example https://indicina-urlshortner.herokuapp.com/statistic/MfBaXjFuZ
 Where MfBaXjFuZ is the URL id in this case. 
@@ -42,7 +44,8 @@ A sample response should be like:
 
 For clarity, I created a table of all the data that can be viewed on the landing page of the application: https://indicina-urlshortner.herokuapp.com
 Following this link, you should see a table like this: 
-![image](https://user-images.githubusercontent.com/83662561/155973559-652b459f-e5cd-4995-ad82-4061ccc9ec5a.png)
+
+![image](https://user-images.githubusercontent.com/83662561/156162972-0680d3c6-f177-4581-b62c-877274f98e19.png)
 
  
 Checkout postman documentation for testing and more info
